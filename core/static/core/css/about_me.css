@@ -1,0 +1,158 @@
+.cyber {
+    min-height: 100vh;
+    scroll-behavior: smooth;
+}
+.cyber_world {
+    width: 96%;
+    height: 60vh;
+    background-color: whitesmoke;
+    border: 1px solid black;
+    border-radius: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.cyber_figure {
+    width: 35%;
+    height: 98%;
+    background-color: whitesmoke;
+    margin-top: auto;
+    margin-bottom: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.cyber_image {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    border: 2px solid black;
+    border-radius: 20px;
+}
+@media screen and ( max-width: 768px ){
+    .cyber_figure {
+        width: 100%;
+    }
+}
+.cyber_description {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 40vh;
+}
+.about_me_title {
+    width: 45%;
+    height: 100%;
+}
+.about_me_title > p {
+    letter-spacing: 10px;
+    font-size: clamp(1rem, 1.5vw, 40rem);
+}
+.about_me_description {
+    width: 45%;
+    height: 100%;
+}
+.about_me_description > p {
+    font-size: clamp(1rem, 1.5vw, 40rem);
+}
+.about_me_description_span {
+    text-decoration: underline;
+    font-weight: bold;
+    background-color: whitesmoke;
+}
+@media screen and ( max-width: 768px ){
+    .cyber {
+        padding-bottom: 5vh;
+    }
+    .about_me_title {
+        width: 90vw;
+        height: 6Vh;
+    }
+    .about_me_title > p {
+        font-size: clamp(1rem, 1vw, 40rem);
+    }
+    .about_me_description {
+        width: 90vw;
+        height: 90%;
+    }
+    .about_me_description > p {
+        font-size: 14px;
+    }
+}
+.gigabyte {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0px;
+    padding: 0px;
+    scroll-behavior: smooth;
+}
+.harddisk {
+    width: 45%;
+    height: 100%;
+}
+.harddisk > p {
+    letter-spacing: 10px;
+    font-size: clamp(1rem, 1.5vw, 40rem);
+}
+.intel {
+    width: 45%;
+    height: 100%;
+}
+.core_processor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 15px;
+    background-color: whitesmoke;
+    box-sizing: border-box;
+    width: auto;
+    padding: 1rem;
+    margin: 0.25rem 0;
+}
+.core_processor:hover {
+    border: 2px solid black;
+    background-color: white;
+    transition: 0.2s ease-in-out;
+}
+.core_processor > p {
+    margin: 0;
+}
+.core_fan {
+    font-size: clamp(1rem, 1.5vw, 40rem);
+    font-weight: bold;
+}
+@media screen and ( max-width: 768px ){
+    .gigabyte {
+        padding-top: 6vh;
+        scroll-behavior: smooth;
+    }
+    .harddisk {
+        width: 100%;
+        height: auto;
+        margin-left: 5%;
+    }
+    .core_processor {
+        width: 100%;
+        margin: 0.25rem 0;
+        padding: 1rem;
+    }
+    .intel {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: stretch;
+        align-items: stretch;
+        gap: 0;
+    }
+}

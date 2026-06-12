@@ -1,0 +1,109 @@
+header {
+    margin: 0px;
+    padding: 0px;
+}
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+}
+.logo_div {
+    margin-left: 5%;
+}
+.logo {
+    text-decoration: none;
+    color: navy;
+    font-size: 30px;
+    scroll-behavior: smooth;
+}
+.logo:hover {
+    font-weight: bold;
+    transition: 1s ease;
+    scroll-behavior: smooth;
+}
+.burger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    width: 35px;
+    height: 30px;
+    gap: 6px;
+    cursor: pointer;
+}
+.burger > span {
+    background-color: black;
+    width: 100%;
+    height: 3px;
+    border-radius: 20px;
+    transition: 0.4s ease;
+    cursor: pointer;
+}
+.loony {
+    margin-left: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 5%;
+    display: flex;
+    gap: 25px;
+}
+.toons {
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    margin: auto;
+    scroll-behavior: smooth;
+}
+.toons:hover {
+    font-weight: bold;
+    text-decoration: underline;
+    scroll-behavior: smooth;
+    transition: 1s ease-out;
+}
+@media screen and (max-width: 768px){
+    .burger {
+        display: flex;
+        margin-left: auto;
+        margin-right: 5%;
+    }
+    .loony {
+        position: fixed;
+        top: 30px;
+        left: 0;
+        z-index: 1;
+        
+        width: 100%;
+        height: 100vh;
+
+        display: flex;
+        flex-direction: column;
+    
+        align-items: center;
+        justify-content: center;
+        padding-top: 40px;
+        gap: 10px;
+        background-color: #030341;
+
+        transform: translateX(100%);
+        transition: transform 0.4s ease;
+    }
+    .loony.show {
+        transform: translateX(0);
+    }
+    .toons {
+        font-size: 25px;
+        color: white;
+        padding: 0px;
+        margin-top: 0;
+        margin-bottom: 10%;
+    }
+    .burger.show span:nth-child(1){
+        transform: translateY(5px) rotate(50deg);
+    }
+    .burger.show span:nth-child(2){
+        transform: translateY(-5px)rotate(-50deg);
+    }
+    body .no-scroll {
+        overflow: hidden;
+    }
+    
+}

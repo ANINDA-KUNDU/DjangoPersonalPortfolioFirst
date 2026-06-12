@@ -1,0 +1,172 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% block title %}ANINDA KUNDU | Home Page{% endblock %}
+{% block meta %}
+    <meta name = "description" content = "This is ANINDA KUNDU's personal portfolio web - app">
+    <meta name = "author" content = "ANINDA KUNDU">
+    <meta name = "title" content = "ANINDA KUNDU's personal portfolio">
+    <meta name = "robot" content = "index,follow">
+    <meta name = "rating" content = "general">
+    <meta name = "language" content = "english">
+    <meta name = "copyright" content = "All rights are reserved by ANINDA KUNDU.">
+    <meta http-equiv = "content-language" content = "en-us">
+    <meta property = "og:title" content = "ANINDA KUNDU | Home">
+    <meta property = "og:description" content = "This is ANINDA KUNDU's personal portfolio web - app">
+    <meta property = "og:type" content = "Portfolio">
+    <meta property = "og:image" content = "https://adella-uninserted-lennon.ngrok-free.dev/static/core/image/aninda_favicon.png">
+    <meta property = "og:url" content = "https://aninda.com">
+{%  endblock  %}
+{% block content %}
+
+
+<div class = "home">
+    <div class = "line_infinite"></div>
+    <div class = "tree">
+        <div class = "name">
+            <p class = "hero">Hello, I'm </p>
+            <p class = "hero_cape"> ANINDA KUNDU</p>
+        </div>
+        <div class = "cauldron">
+            <p>Scroll Down &darr;</p>
+        </div>
+    </div>
+    <div class = "frame_name" >
+        <figure class = "picture_box">
+            <img src = "{% static 'core/image/aninda_hero_image_resize.png' %}" class = "picture">
+        </figure>
+    </div>
+</div>
+
+<div class = "rocket">
+    <div class = "space">
+        <p class = "booster">Introduction</p>
+        <div class = "exploration">
+            <p class = "fuel_tank">
+                I am ANINDA KUNDU and I am a Full - Stack Web Developer ( Python, Django ).I belong to INDIA. 
+                I have been exploring all the opportunities in this field of Technology.
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class = "planet">
+    <div class = "earth">
+        <div class = "line"></div>
+        <p>HOW &nbsp;  I  &nbsp;  CONTRIBUTE</p>
+    </div>
+    <div class = "mars">
+        <p>
+            I take real life technical challenges and based on my set of skills, 
+            I solve them into a fully-functional, working and scalable Web - app.
+        </p>
+    </div>
+    <div class = "venus">
+        <p>This process includes - Ideation, Brainstorming, Design and Development.</p>
+    </div>
+</div>
+
+<div class = "fish">
+    <div class = "chicken">
+        <p class = "course">SKILLS</p>
+        <div class = "second_line"></div>
+    </div>
+    <div class = "container">
+        <div class = "tech_stack">
+            <p class = "technology">FRONTEND</p>
+            <div class = "software">
+                <p class = "development">HTML5</p>
+                <p class = "development">CSS3</p>
+                <p class = "development">JavaScript ES6</p>
+                <p class = "development">UX & UI Design</p>
+            </div>
+        </div>
+        <div class = "tech_stack">
+            <p class = "technology">BACKEND</p>
+            <div class = "software">
+                <p class = "development">Python</p>
+                <p class = "development">Version Control</p>
+                <p class = "development">MySQL</p>
+                <p class = "development">Django REST framework</p>
+                <p class = "development">Django Web Framework</p>
+            </div>
+        </div>
+        <div class = "tech_stack">
+            <p class = "technology">TOOL</p>
+            <div class = "software">
+                <p class = "development">Windows</p>
+                <p class = "development">VS Code</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class = "soil">
+    <div class = "mud">
+        <p class = "superman">&rarr; &nbsp; GRAVITY OF THE FIELD</p>
+    </div>
+    <div class = "leaf">
+        <p class = "branch">
+            The field of Full - Stack Web Development ( Python, django ) is a rapidly growing worldwide.
+            A full - stack web developer is creative, graphically inclined and fond of engineering new ideas. 
+        </p>
+        <p class = "branch">
+            The World of Full - Stack Web Development is large. Mnay new and evolving technologies continuously push
+            the limits of what a Full - Stack Web Developer can create. When it combines with Python and Django, complex 
+            and challenging problems can bring solutions precisely.  
+        </p>
+        <p class = "branch">
+            In Full - Stack Web Development ( Python, django ), an engineer has to develop from Front-End to Back-End creating 
+            beautiful UI & UX, developing APIs and managing database. It is a vast field with new and modern possibility.
+        </p>
+        <p class = "branch">
+            A Full - Stack Web Developer applies creativity and analysis to develop a new Web - app.
+        </p>
+    </div>
+</div>
+
+<div class = "mine">
+    <div class = "gold">
+        <div class="marquee-track">
+            <div class="marquee-content">
+                <p>
+                    Creativity, Ideas and Opportunity that drives a better future *
+                    Exploration for new possibility and curiosity have always been a driving factor *
+                    Genuine efforts in hardwork contributes for positive growth *
+                </p>
+            </div>
+            <div class="marquee-content" aria-hidden="true">
+                <p>
+                    Creativity, Ideas and Opportunity that drives a better future. *
+                    Exploration for new possibility and curiosity have always been a driving factor. *
+                    Genuine efforts in hardwork contributes for positive growth.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class = "alien">
+    <div class = "jump_gate">
+        <p>MY WORKS</p>
+        <div class = "third_line"></div>
+    </div>
+    <div class = "exhibition">
+        {% for work in works  %}
+        <div class = "lab">
+            <figure class = "project_box">
+                <img src = "{{work.picture.url}}" alt = "{{work.title}}" class = "project_picture">
+            </figure>
+            <div class = "theory">
+                <p class = "project_title">{{ work.title | upper  }}</p>
+                <p>{{ work.description  }}</p>
+            </div>
+        </div>
+        <br>
+        {% endfor %}
+        <a href = "{% url 'work' %}" class = "work_page">...more</a>
+    </div>
+</div>
+
+
+
+{% endblock  %}

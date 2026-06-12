@@ -1,0 +1,20 @@
+{% load static %}
+<header>
+    <nav>
+        <div class = "logo_div">
+            <a href = "{% url 'home' %}" class = "logo">aninda.</a>
+        </div>
+        <div class = "burger" id = "ham">
+            <span></span>
+            <span></span>
+        </div>
+        <div class = "loony" id = "menu">
+            <a href = "{% url 'home' %}" class = "toons">Home</a>
+            <a href = "{% url 'about_me' %}" class = "toons">About Me</a>
+            <a href = "{% url 'work' %}" class = "toons">Work</a>
+            <a href = "{% url 'contact' %}" class = "toons">Contact</a>
+        </div>
+    </nav>
+</header>
+
+

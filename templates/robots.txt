@@ -1,0 +1,14 @@
+User-agent: *
+Disallow: /privatestuff/
+Disallow: /admin/
+Disallow: /junk/
+
+User-agent: GPTbot
+Disallow: /privatestuff/
+Disallow: /admin/
+Disallow: /junk/
+
+User-agent: Googlebot
+Disallow: /privatestuff/
+Disallow: /admin/
+Disallow: /junk/

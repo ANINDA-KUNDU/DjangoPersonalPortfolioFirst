@@ -1,0 +1,53 @@
+{% extends 'core/base.html' %}
+{% load static  %}
+{% block title  %}ANINDA KUNDU | Contact Page{% endblock %}
+{% block meta %}
+    <meta name = "description" content = "This is ANINDA KUNDU's personal portfolio web - app">
+    <meta name = "author" content = "ANINDA KUNDU">
+    <meta name = "title" content = "ANINDA KUNDU's personal portfolio">
+    <meta name = "robot" content = "index,follow">
+    <meta name = "rating" content = "general">
+    <meta name = "language" content = "english">
+    <meta name = "copyright" content = "All rights are reserved by ANINDA KUNDU.">
+    <meta http-equiv = "content-language" content = "en-us">
+    <meta property = "og:title" content = "ANINDA KUNDU | About Me">
+    <meta property = "og:description" content = "This is ANINDA KUNDU's personal portfolio web - app - Contact section">
+    <meta property = "og:type" content = "Portfolio">
+    <meta property = "og:image" content = "https://adella-uninserted-lennon.ngrok-free.dev/static/core/image/aninda_favicon.png">
+    <meta property = "og:url" content = "https://aninda.com">
+{%  endblock  %}
+{% block content %}
+
+
+<div class = "space_yard">
+    <div class = "line_five"></div>
+    <div class = "space_station">
+        <div class = "space_launch">
+            <p class = "space_mine">Contact Page</p>
+            <p class = "space_meteor">
+                I have given all my contact information here. <br>
+                If anyone is interested for professional requirements, you can contact me with these information below.
+            </p>
+            <p class = "space_comet">
+                <span class = "aninda">ANINDA  KUNDU</span><br>
+                West Bengal - 741404, <br>
+                India<br>
+                <br>
+                E-mail: &nbsp; <span class = "space_orbit">kunduaninda@yahoo.com</span>
+            </p>
+        </div>
+        <div class = "space_rock">
+                <a href = "https://www.linkedin.com/in/aninda-kundu-481718188/recent-activity/all/" class = "space_anchor">
+                    <img src="{% static 'core/image/icon_linkedin.jpg' %}" alt="LinkedIn"  class = "link_image">
+                </a>
+                &nbsp;
+                <a href = "https://github.com/ANINDA-KUNDU?tab=repositories" class = "space_anchor">
+                    <img src = "{% static 'core/image/icon_github.png' %}" alt = "GitHub" class = "link_image">
+                </a>
+            </div>
+    </div>
+</div>
+
+
+{% endblock %}
+

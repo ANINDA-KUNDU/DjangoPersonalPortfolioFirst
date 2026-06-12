@@ -1,0 +1,171 @@
+.space_jam {
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    scroll-behavior: smooth;
+}
+.space_jam > h2 {
+    letter-spacing: 15px;
+    margin-right: auto;
+    margin-left: 5%;
+    padding: 0px;
+    animation: Unix 1s linear;
+}
+@keyframes Unix {
+    from {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+.space_jam > p {
+    margin: 0px;
+    padding: 0px;
+    margin-bottom: auto;
+    margin-left: 5%;
+    margin-right: 5%;
+    font-size: clamp( 1rem, 2.5vw, 40rem );
+    animation: Omega 1s linear;
+}
+@keyframes Omega {
+    from {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+@media screen and ( max-width: 768px ){
+    .space_jam > p {
+        font-size: clamp( 1rem, 4.5vw, 40rem );
+    }
+}
+.circuit {
+    min-height: 100vh;
+    position: relative;
+    overflow: visible;
+    padding-bottom: 5vh;
+    z-index: 1;
+    scroll-behavior: smooth;
+}
+.ark_reactor {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 2vh;
+}
+.ark_reactor > h1 {
+    font-size: clamp( 1rem, 2vw, 40rem );
+}
+.line_four {
+    width: 70%;
+    height: 1px;
+    background-color: black;
+    margin-left: 3%;
+}
+.work_field {
+    min-height: 90vh;
+    height: auto;
+    width: 96%;
+    position: sticky;
+    top: 5vh;
+    margin-inline: auto;
+    margin-bottom: 10vh;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid black;
+    gap: 15px;
+    scroll-behavior: smooth;
+    z-index: 1;
+    background-color: whitesmoke;
+    overflow: hidden;
+    isolation: isolate;
+}
+.work_figure {
+    flex: 0 0 40%;
+    width: 350px;
+    height: 300px;
+
+    position: relative;
+    overflow: hidden;
+
+    opacity: 1;
+    transform: translateY(0);
+
+
+    padding-bottom: 5vh;
+}
+.project_work_figure {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+
+    opacity: 1;
+    transform: translateY(0);
+}
+.work_figure, .project_work_figure {
+    animation: Universe linear both;
+    animation-timeline: view();
+    animation-range: entry 0% cover 25%;
+} 
+@keyframes Universe {
+    from {
+        transform: translateY(500px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+.line_six {
+    width: 70%;
+    height: 1px;
+    background-color: black;
+    margin: 0px;
+}
+.project_work_data {
+    width: 50%;
+
+    margin-left: 3%;
+}
+@media screen and ( max-width: 768px ) {
+    .ark_reactor > h1 {
+        font-size: clamp( 1rem, 5vw, 40rem );
+    }
+    .line_four {
+        width: 50%;
+    }
+    .work_figure {
+        height:150px;
+        width: 95%;
+        margin: 10px 0px;
+    }
+    .work_field {
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 0px;
+        scroll-behavior: smooth;
+    }
+    .project_work_data {
+        width: 95%;
+        height: auto;
+        margin: 10px 0px;
+    }
+}

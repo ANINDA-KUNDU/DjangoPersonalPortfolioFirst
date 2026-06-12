@@ -1,0 +1,42 @@
+{% load static %}
+<footer>
+    <p class = "prime">ANINDA KUNDU <span class = "register">&reg;</span></p>
+    <div>
+        <p class = "optimus">PAGES</p>
+        <div class = "fourth_line"></div>
+        <a href = "{% url 'home' %}" class = "galvatron">Home</a>
+        <a href = "{% url 'about_me' %}" class = "galvatron">About Me</a>
+        <a href = "{% url 'work' %}" class = "galvatron">Work</a>
+        <a href = "{% url 'contact' %}" class = "galvatron">Contact</a>
+    </div>
+    <div>
+        <p class = "optimus">LINKS</p>
+        <div class = "fourth_line"></div>
+        <a href = "{% url 'work_feed' %}" class = "galvatron">RSS</a>
+        <a href = "{% url 'work_atom_feed' %}" class = "galvatron">Atom</a>
+        <a href = "{% url 'sitemap' %}" class = "galvatron">Sitemap</a>
+    </div>
+    <div>
+        <p class = "heading">Aninda Portfolio</p>
+        <div class = "portfolio_description">
+            <p>
+            I am ANINDA KUNDU and I am a Full-Stack Web Developer ( Python, Django ).
+            This portfolio Web - app is a part of my self - project.
+            This portfolio Web - app reflects my skills towards my hardwork. 
+            I have developed this Web - app with Python and Django.
+            <span class = "space_orbit_launch">kunduaninda@yahoo.com</span>
+            </p>
+            <div class = "external_link">
+                <a href = "https://www.linkedin.com/in/aninda-kundu-481718188/recent-activity/all/" class = "external_anchor">
+                    <img src="{% static 'core/image/icon_linkedin.jpg' %}" alt="LinkedIn"  class = "link_image">
+                </a>
+                <a href = "https://github.com/ANINDA-KUNDU?tab=repositories">
+                    <img src = "{% static 'core/image/icon_github.png' %}" alt = "GitHub" class = "link_image">
+                </a>
+            </div>
+        </div>
+    </div>
+    <div>
+        <p class = "copyright">&copy; All Rights are Reserved by <b>ANINDA KUNDU</b> {% now 'Y' %}</p>
+    </div>
+</footer>

@@ -1,0 +1,82 @@
+{% extends 'core/base.html' %}
+{% load static  %}
+{% block title  %}ANINDA KUNDU | About Me Page{% endblock %}
+{% block meta %}
+    <meta name = "description" content = "This is ANINDA KUNDU's personal portfolio web - app">
+    <meta name = "author" content = "ANINDA KUNDU">
+    <meta name = "title" content = "ANINDA KUNDU's personal portfolio">
+    <meta name = "robot" content = "index,follow">
+    <meta name = "rating" content = "general">
+    <meta name = "language" content = "english">
+    <meta name = "copyright" content = "All rights are reserved by ANINDA KUNDU.">
+    <meta http-equiv = "content-language" content = "en-us">
+    <meta property = "og:title" content = "ANINDA KUNDU | About Me">
+    <meta property = "og:description" content = "This is ANINDA KUNDU's personal portfolio web - app - About Me section">
+    <meta property = "og:type" content = "Portfolio">
+    <meta property = "og:image" content = "https://adella-uninserted-lennon.ngrok-free.dev/static/core/image/aninda_favicon.png">
+    <meta property = "og:url" content = "https://aninda.com">
+{%  endblock  %}
+{% block content %}
+
+<div class = "cyber">
+    <div class = "cyber_world">
+        <figure class = "cyber_figure">
+            <img src = "{% static 'core/image/aninda_about_me-removebg-preview.png' %}" alt = "The Picture for About Me" 
+            class = "cyber_image"> 
+        </figure>
+    </div>
+    <div class = "cyber_description">
+        <div class = "about_me_title">
+            <p>ABOUT ME</p>
+        </div>
+        <div class = "about_me_description">
+            <p>
+                I am ANINDA KUNDU and I am Full - Stack Web Developer ( Python, Django ). I have gained all the required
+                engineering skills on both Front - End Development and Back - End Development. 
+                Now, I am looking forward to work as a <span class = "about_me_description_span">
+                Full - Stack Web Developer( Python, Django )</span>. I am really harworking and passionate about 
+                my work. I believe, I can become the best contributor in the organisation if I 
+                am given positive guidance and environment. I have always encouraged new ideas 
+                reasonable conversations and through analysis to solve problems.    
+
+            </p>
+        </div>
+    </div>
+</div>
+<div class = "gigabyte">
+    <div class = "harddisk">
+        <p>MY SKILLS</p>
+    </div>
+    <div class = "intel">
+        <div class = "core_processor">
+            <p class = "core_fan">HTML</p>
+        </div>
+        <div class = "core_processor">
+            <p  class = "core_fan">CSS</p>
+        </div>
+        <div class = "core_processor">
+            <p class = "core_fan">JavaScript</p>
+        </div>
+        <div class = "core_processor">
+            <p class = "core_fan">UX / UI Design</p>
+        </div>
+        <div class = "core_processor">
+            <p class = "core_fan">Python</p>
+        </div>
+        <div class = "core_processor">
+            <p class = "core_fan">Version Control</p>
+        </div>
+        <div class = "core_processor">
+            <p class = "core_fan">MySQL</p>
+        </div>
+        <div class = "core_processor">
+            <p class = "core_fan">Django Web Framework</p>
+        </div>
+        <div class = "core_processor">
+            <p class = "core_fan">Django REST API</p>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}

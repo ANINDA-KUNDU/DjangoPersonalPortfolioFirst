@@ -1,0 +1,58 @@
+{% extends 'core/base.html'  %}
+{% load static  %}
+{% block title  %}ANINDA KUNDU | My Work{% endblock  %}
+{% block meta %}
+    <meta name = "description" content = "This is ANINDA KUNDU's personal portfolio web - app">
+    <meta name = "author" content = "ANINDA KUNDU">
+    <meta name = "title" content = "ANINDA KUNDU's personal portfolio">
+    <meta name = "robot" content = "index,follow">
+    <meta name = "rating" content = "general">
+    <meta name = "language" content = "english">
+    <meta name = "copyright" content = "All rights are reserved by ANINDA KUNDU.">
+    <meta http-equiv = "content-language" content = "en-us">
+    <meta property = "og:title" content = "ANINDA KUNDU | About Me">
+    <meta property = "og:description" content = "This is ANINDA KUNDU's personal portfolio web - app - My Work section">
+    <meta property = "og:type" content = "Portfolio">
+    <meta property = "og:image" content = "https://adella-uninserted-lennon.ngrok-free.dev/static/core/image/aninda_favicon.png">
+    <meta property = "og:url" content = "https://aninda.com">
+{%  endblock  %}
+{% block content  %}
+
+<div class = "space_jam">
+    <h2>IN BRIEF &rarr; </h2>
+    <p>
+        Here, I have developed these Web - app that they are part of my set of self - project.
+        These Web applications are fully functional, working and scalable. These are good examples of 
+        Real life projects that they are excellent for there competitiveness. I have utilised the skills 
+        mainly Python and Django which are fantastic combination to solve complex and large problems. Below,
+        a few selected work is listed to reflect my engineering skills and knowledge.  
+    </p>
+
+</div>
+
+<div class = "circuit">
+    <div class = "ark_reactor">
+        <h1>MY WORK</h1>
+        <div class = "line_four"></div>
+    </div>
+    {%  for work in works  %}
+    <div class = "work_field">
+        <figure class = "work_figure">
+            <img src = "{{ work.picture.url }}" alt = "{{ work.title }}" class = "project_work_figure">
+        </figure>
+        <div class = "project_work_data">
+            <h2>{{ work.title }}</h2>
+            <div class = "line_six"></div>
+            <p>
+                {{ work.description }}
+            </p>
+            <br>
+        </div>
+    </div>
+    <br>
+    {% endfor  %}
+</div>
+
+
+
+{% endblock  %}
