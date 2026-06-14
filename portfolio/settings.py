@@ -31,7 +31,7 @@ SECRET_KEY = env("SECRET_KEY", default="django-insecure-^qi19(+(oo-ere5b&$@275ch
 
 DEBUG = env.bool("DEBUG", default=True)
 
-ALLOWED_HOSTS = env.list('ALLOWED_HOSTS', default=['*'])
+ALLOWED_HOSTS = env.list('ALLOWED_HOSTS', default=[])
 
 
 # Application definition
@@ -53,10 +53,10 @@ SITE_ID = 1
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-    'django.contrib.sessions.middleware.SessionMiddleware',
     
     'whitenoise.middleware.WhiteNoiseMiddleware',
     
+    'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -173,7 +173,4 @@ CSRF_COOKIE_PATH = '/'
 CSRF_COOKIE_SAMESITE = 'Lax'
 CSRF_USE_SESSIONS = False
 CSRF_HEADER_NAME = 'HTTP_X_CSRFTOKEN'
-CSRF_TRUSTED_ORIGINS = ['https://*.fly.dev'] # For Production Purpose Change this
-
-CSP_STYLE_SRC = ("'self'", "https://fonts.googleapis.com")
-CSP_SCRIPT_SRC = ("'self'", "'nonce'")
+CSRF_TRUSTED_ORIGINS = []
