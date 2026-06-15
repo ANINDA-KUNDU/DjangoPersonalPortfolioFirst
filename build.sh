@@ -11,3 +11,7 @@ python manage.py collectstatic --no-input
 
 # Apply any outstanding database migrations
 python manage.py migrate
+
+
+# This automatically loads your 160 objects into the manual database during deployment
+python manage.py loaddata datadump.json

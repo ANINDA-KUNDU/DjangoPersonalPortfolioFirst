@@ -1,9 +1,3 @@
-databases:
-  - name: aninda-postgres
-    plan: free
-    databaseName: aninda_postgres # This field don't contain any '-' hypen.
-    user: aninda
-
 services:
   - type: web
     plan: free
