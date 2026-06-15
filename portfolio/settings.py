@@ -160,7 +160,10 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedMainfestStaticFilesStorage'
 
 
 MEDIA_URL = '/media/'
-MEDIA_ROOT = BASE_DIR / 'media'
+if not DEBUG:
+    MEDIA_ROOT = '/data/media'
+else:
+    MEDIA_ROOT = BASE_DIR / 'media'
 
 
 SECURE_SSL_REDIRECT = True
