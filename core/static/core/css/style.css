@@ -179,7 +179,7 @@ html, body {
     margin: 3%;
     animation: SideLeft linear both;
     animation-timeline: view();
-    animation-range: entry 0% cover 20%;
+    animation-range: entry 0% cover 35%;
 }
 @keyframes SideLeft {
     from {
@@ -222,7 +222,7 @@ html, body {
     padding-top: 4%;
     animation: SlideLeft linear both;
     animation-timeline: view();
-    animation-range: entry 0% cover 25%;
+    animation-range: entry 0% cover 30%;
 }
 @keyframes SlideLeft {
     from {
@@ -251,7 +251,7 @@ html, body {
     margin-left: 3%;
     animation: AppearUp linear both;
     animation-timeline: view();
-    animation-range: entry 0% cover 25%;
+    animation-range: entry 0% cover 30%;
 }
 @keyframes AppearUp {
     from {
@@ -271,7 +271,7 @@ html, body {
     margin-left: 3%;
     animation: SlideRight linear both;
     animation-timeline: view();
-    animation-range: entry 0% cover 20%;
+    animation-range: entry 0% cover 25%;
 }
 @keyframes SlideRight {
     from {
@@ -311,7 +311,7 @@ html, body {
     width: 70%;
     animation: ChickenSlideLeft linear both;
     animation-timeline: view();
-    animation-range: entry 0% cover 25%;
+    animation-range: entry 0% cover 30%;
 }
 @keyframes ChickenSlideLeft {
     from {
