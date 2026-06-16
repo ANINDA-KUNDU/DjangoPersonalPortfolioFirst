@@ -79,6 +79,7 @@ SECURE_CSP = {
     "style-src": [CSP.SELF, "https://fonts.googleapis.com"],
     "font-src": [CSP.SELF, "https://fonts.gstatic.com"],
     "script-src": [CSP.SELF],
+    "img-src": [CSP.SELF, "https://res.cloudinary.com", "data:"],
 }
 
 ROOT_URLCONF = 'portfolio.urls'
