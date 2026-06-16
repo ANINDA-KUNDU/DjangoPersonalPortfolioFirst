@@ -193,3 +193,4 @@ CLOUDINARY_STORAGE = {
     'CLOUDINARY_API_KEY': env('CLOUDINARY_API_KEY'),
     'CLOUDINARY_SECRET_KEY': env('CLOUDINARY_SECRET_KEY'),
 }
+CSP_IMG_SRC = ("'self'", "https://res.cloudinary.com", "data:")
