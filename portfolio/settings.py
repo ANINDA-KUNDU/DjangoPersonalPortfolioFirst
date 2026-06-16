@@ -13,6 +13,7 @@ import dj_database_url
 from pathlib import Path
 from environs import Env
 import os
+import cloudinary
 
 env = Env()
 
@@ -189,8 +190,13 @@ CSRF_TRUSTED_ORIGINS = env.list('CSRF_TRUSTED_ORIGINS', default=[])
 
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 CLOUDINARY_STORAGE = {
-    'CLOUDINARY_CLOUD_NAME': env('CLOUDINARY_CLOUD_NAME', default=env('CLOUDINARY_CLOUDE_NAME', default=None)),
-    'CLOUDINARY_API_KEY': env('CLOUDINARY_API_KEY'),
-    'CLOUDINARY_SECRET_KEY': env('CLOUDINARY_SECRET_KEY'),
+    'CLOUD_NAME': env('CLOUDINARY_CLOUD_NAME', default=env('CLOUDINARY_CLOUDE_NAME', default=None)),
+    'API_KEY': env('CLOUDINARY_API_KEY'),
+    'API_SECRET': env('CLOUDINARY_SECRET_KEY'),
 }
+cloudinary.config(
+    cloud_name=CLOUDINARY_STORAGE['CLOUD_NAME'],
+    api_key=CLOUDINARY_STORAGE['API_KEY'],
+    api_secret=CLOUDINARY_STORAGE['API_SECRET'],
+)
 CSP_IMG_SRC = ("'self'", "https://res.cloudinary.com", "data:")
