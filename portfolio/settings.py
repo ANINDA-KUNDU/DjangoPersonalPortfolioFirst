@@ -44,7 +44,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'whitenoise.runserver_nostatic',
+    'cloudinary_storage',
     'django.contrib.staticfiles',
+    'cloudinary',
     'core',
     'django.contrib.sites',
     'django.contrib.sitemaps',
@@ -184,3 +186,10 @@ CSRF_COOKIE_SAMESITE = 'Lax'
 CSRF_USE_SESSIONS = False
 CSRF_HEADER_NAME = 'HTTP_X_CSRFTOKEN'
 CSRF_TRUSTED_ORIGINS = env.list('CSRF_TRUSTED_ORIGINS', default=[])
+
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+CLOUDINARY_STORAGE = {
+    'CLOUDINARY_CLOUD_NAME': env('CLOUDINARY_CLOUDE_NAME'),
+    'CLOUDINARY_API_KEY': env('CLOUDINARY_API_KEY'),
+    'CLOUDINARY_SECRET_KEY': env('CLOUDINARY_SECRET_KEY'),
+}

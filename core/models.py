@@ -2,13 +2,15 @@ from django.db import models
 from django.contrib.auth.models import User
 
 from django.urls import reverse
+
+from cloudinary.models import CloudinaryField
 # Create your models here.
 
 class Work( models.Model ):
     user = models.ForeignKey( User, on_delete = models.CASCADE )
     title = models.CharField( max_length = 255 )
     description = models.TextField( max_length = 700 )
-    picture = models.ImageField( upload_to = "core/work/", default = "default_work.png", blank = True, null = True )
+    picture = CloudinaryField( "aninda_portfolio_picture", default = "default_work.png", blank = True, null = True )
     created_at = models.DateTimeField( auto_now_add = True )
     modified_at = models.DateTimeField( auto_now = True )
     
