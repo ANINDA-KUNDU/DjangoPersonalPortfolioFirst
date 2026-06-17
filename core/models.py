@@ -10,7 +10,7 @@ class Work( models.Model ):
     user = models.ForeignKey( User, on_delete = models.CASCADE )
     title = models.CharField( max_length = 255 )
     description = models.TextField( max_length = 700 )
-    picture = CloudinaryField( "aninda_portfolio_picture", default = "default_work.png", blank = True, null = True )
+    picture = CloudinaryField( folder = "core/work", default = "core/work/default_work.png", blank = True, null = True )
     created_at = models.DateTimeField( auto_now_add = True )
     modified_at = models.DateTimeField( auto_now = True )
     
