@@ -1,3 +1,4 @@
+# Force fresh data load sync
 databases:
   - name: anindadb
     plan: free
