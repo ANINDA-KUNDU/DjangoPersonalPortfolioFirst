@@ -7,7 +7,7 @@ services:
     plan: free
     name: anindakundu
     runtime: python
-    buildCommand: './build.sh && python manage.py dumpdata datadump.json'
+    buildCommand: ' ./build.sh && python manage.py loaddata datadump.json '
     startCommand: 'gunicorn portfolio.wsgi:application'
     envVars:
       - key: DATABASE_URL
