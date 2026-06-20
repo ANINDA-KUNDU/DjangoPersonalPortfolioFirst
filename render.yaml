@@ -1,3 +1,6 @@
+databases:
+  - name: aninda-postgres
+    plan: free
 services:
   - type: web
     plan: free
